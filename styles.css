@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -37,35 +37,72 @@ body {
 .content {
     padding: 31px 0 16px 19px;   
     width: 414px;
-    background-color: green;    
-}
-
-.menu-options {
+    background-color: #EEEEEE;
     
 }
 
 .main-course, .drinks, .desserts {
-    display: flex;
-    overflow-y: auto;
-    background-color: red;
+    display: flex;    
+    overflow-x: scroll;
+    background-color: #EEEEEE;
     
 }
 
+/*.main-course::-webkit-scrollbar {
+    display: none;
+}*/
+
 .option {
-    background-color: blue;
-    width: 172px;
+    background-color: #FFFFFF;
+    min-width: 172px;
     height: 216px;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     margin-right: 16px;
     
+    
 
+}
+
+.option:hover {
+    cursor: pointer;    
+}
+
+.image {
+    margin: 18px auto 8px auto;
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;    
+}
+
+.option img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;    
+}
+
+.item-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-bottom: 4px;
+}
+
+.item-description {
+    font-size: 15px;
+    font-weight: lighter;
+    color: #A6A6A6;
+    margin: 0 1px 5px 15px;   
+}
+
+.item-price {
+    margin-left: 15px;
 }
 
 .bottom-bar {
     width: 414px;
     height: 92px;
-    background-color: gray;
+    background-color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,6 +117,10 @@ body {
     font-size: 20px;
     color: white;
     padding-top: 10px;
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 
