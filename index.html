@@ -38,7 +38,7 @@
 			<div class="main-course">
 
 				<!-- OPTION -->
-				<div class="option">
+				<div class="option" id="1" onclick="selectionMain('1'), checkIconMain('icon1');">
 
 					<div class="image">
 						<img src="images/sandwich.jpeg">
@@ -47,16 +47,20 @@
 						Lentilha Power com Cheddar
 					</div>
 					<div class="item-description">
-						Broto de alfafa e hamburguer de lentilha
+						Broto de alfafa e hamburguer
 					</div>
 					<div class="item-price">
 						R$ 21,90
+					</div>
+
+					<div class="check-icon" id="icon1">
+						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>	
 				<!-- OPTION -->	
 				
 				<!-- OPTION -->
-				<div class="option">
+				<div class="option" id="2" onclick="selectionMain('2'), checkIconMain('icon2');">
 
 					<div class="image">
 						<img src="images/sandwich.jpeg">
@@ -65,16 +69,20 @@
 						Lentilha Power com Cheddar
 					</div>
 					<div class="item-description">
-						Broto de alfafa e hamburguer de lentilha
+						Broto de alfafa e hamburguer
 					</div>
 					<div class="item-price">
 						R$ 23,90
+					</div>
+
+					<div class="check-icon" id="icon2">
+						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>	
 				<!-- OPTION -->	
 
 				<!-- OPTION -->
-				<div class="option">
+				<div class="option" id="3" onclick="selectionMain('3'), checkIconMain('icon3');">
 
 					<div class="image">
 						<img src="images/sandwich.jpeg">
@@ -83,10 +91,14 @@
 						Lentilha Power com Cheddar
 					</div>
 					<div class="item-description">
-						Broto de alfafa e hamburguer de lentilha
+						Broto de alfafa e hamburguer
 					</div>
 					<div class="item-price">
 						R$ 25,90
+					</div>
+
+					<div class="check-icon" id="icon3">
+						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>	
 				<!-- OPTION -->	
@@ -102,7 +114,7 @@
 			<div class="drinks">
 
 				<!-- OPTION -->
-				<div class="option">
+				<div class="option" id="4" onclick="selectionDrinks('4'), checkIconDrinks('icon4');">
 
 					<div class="image">
 						<img src="images/kombucha.jpeg">
@@ -116,11 +128,15 @@
 					<div class="item-price">
 						R$ 9,90
 					</div>
+					<div class="check-icon" id="icon4">
+						<ion-icon name="checkmark-circle"></ion-icon>
+					</div>
 				</div>	
 				<!-- OPTION -->	
 
 				<!-- OPTION -->
-				<div class="option">
+				<div class="option" id="5" onclick="selectionDrinks('5'), checkIconDrinks('icon5');">
+
 
 					<div class="image">
 						<img src="images/kombucha.jpeg">
@@ -134,11 +150,15 @@
 					<div class="item-price">
 						R$ 11,90
 					</div>
+					<div class="check-icon" id="icon5">
+						<ion-icon name="checkmark-circle"></ion-icon>
+					</div>
 				</div>	
 				<!-- OPTION -->	
 
 				<!-- OPTION -->
-				<div class="option">
+				<div class="option" id="6" onclick="selectionDrinks('6'), checkIconDrinks('icon6');">
+
 
 					<div class="image">
 						<img src="images/kombucha.jpeg">
@@ -151,6 +171,9 @@
 					</div>
 					<div class="item-price">
 						R$ 13,90
+					</div>
+					<div class="check-icon" id="icon6">
+						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>	
 				<!-- OPTION -->	
@@ -166,7 +189,8 @@
 			<div class="desserts">
 
 				<!-- OPTION -->
-				<div class="option">
+				<div class="option" id="7" onclick="selectionDesserts('7'), checkIconDesserts('icon7');">
+
 
 					<div class="image">
 						<img src="images/pie.jpeg">
@@ -176,16 +200,20 @@
 					</div>
 					<div class="item-description">
 						Creme branco e 
-						cobertura de chocolate
+						cobertura
 					</div>
 					<div class="item-price">
 						R$ 7,90
 					</div>
+					<div class="check-icon" id="icon7">
+						<ion-icon name="checkmark-circle"></ion-icon>
+					</div>
 				</div>	
 				<!-- OPTION -->	
 
 				<!-- OPTION -->
-				<div class="option">
+				<div class="option" id="8" onclick="selectionDesserts('8'), checkIconDesserts('icon8');">
+
 
 					<div class="image">
 						<img src="images/pie.jpeg">
@@ -195,16 +223,20 @@
 					</div>
 					<div class="item-description">
 						Creme branco e 
-						cobertura de chocolate
+						cobertura
 					</div>
 					<div class="item-price">
 						R$ 9,90
 					</div>
+					<div class="check-icon" id="icon8">
+						<ion-icon name="checkmark-circle"></ion-icon>
+					</div>
 				</div>	
 				<!-- OPTION -->	
 
 				<!-- OPTION -->
-				<div class="option">
+				<div class="option" id="9" onclick="selectionDesserts('9'), checkIconDesserts('icon9');">
+
 
 					<div class="image">
 						<img src="images/pie.jpeg">
@@ -214,10 +246,13 @@
 					</div>
 					<div class="item-description">
 						Creme branco e 
-						cobertura de chocolate
+						cobertura
 					</div>
 					<div class="item-price">
 						R$ 12,90
+					</div>
+					<div class="check-icon" id="icon9">
+						<ion-icon name="checkmark-circle"></ion-icon>
 					</div>
 				</div>	
 				<!-- OPTION -->	
@@ -240,6 +275,7 @@
 	
 
 
-
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	<script src="scripts.js"></script>
 </body>
