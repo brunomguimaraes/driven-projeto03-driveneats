@@ -1,23 +1,3 @@
-/*MAIN COURSE'S FUNCTIONS*/
-
-function selectionMain(clicked) {
-    if (clicked === '1') {
-        document.getElementById(clicked).style.border = '5px solid #32B72F';
-        document.getElementById('2').style.border = '0';
-        document.getElementById('3').style.border = '0';     
-    }
-    else if (clicked === "2") {
-        document.getElementById('1').style.border = '0';
-        document.getElementById(clicked).style.border = '5px solid #32B72F';
-        document.getElementById('3').style.border = '0';
-    }
-    else {
-        document.getElementById('1').style.border = '0';
-        document.getElementById('2').style.border = '0';
-        document.getElementById(clicked).style.border = '5px solid #32B72F';
-    }      
-}
-
 function checkIconMain(active) {
     if (active === 'icon1') {
         document.getElementById(active).style.display = 'initial';
@@ -36,26 +16,6 @@ function checkIconMain(active) {
         document.getElementById('icon2').style.display = 'none';
         document.getElementById(active).style.display = 'initial';
     }
-}
-
-/*DRINKS' FUNCTIONS*/
-
-function selectionDrinks(clicked) {
-    if (clicked === '4') {
-        document.getElementById(clicked).style.border = '5px solid #32B72F';
-        document.getElementById('5').style.border = '0';
-        document.getElementById('6').style.border = '0';     
-    }
-    else if (clicked === "5") {
-        document.getElementById('4').style.border = '0';
-        document.getElementById(clicked).style.border = '5px solid #32B72F';
-        document.getElementById('6').style.border = '0';
-    }
-    else {
-        document.getElementById('4').style.border = '0';
-        document.getElementById('5').style.border = '0';
-        document.getElementById(clicked).style.border = '5px solid #32B72F';
-    }      
 }
 
 function checkIconDrinks(active) {
@@ -78,26 +38,6 @@ function checkIconDrinks(active) {
     }    
 }
 
-/*DESSERTS' FUNCTIONS*/
-
-function selectionDesserts(clicked) {
-    if (clicked === '7') {
-        document.getElementById(clicked).style.border = '5px solid #32B72F';
-        document.getElementById('8').style.border = '0';
-        document.getElementById('9').style.border = '0';     
-    }
-    else if (clicked === "8") {
-        document.getElementById('7').style.border = '0';
-        document.getElementById(clicked).style.border = '5px solid #32B72F';
-        document.getElementById('9').style.border = '0';
-    }
-    else {
-        document.getElementById('7').style.border = '0';
-        document.getElementById('8').style.border = '0';
-        document.getElementById(clicked).style.border = '5px solid #32B72F';
-    }      
-}
-
 function checkIconDesserts(active) {
     if (active === 'icon7') {
         document.getElementById(active).style.display = 'initial';
@@ -118,4 +58,49 @@ function checkIconDesserts(active) {
     }    
 }
 
+function mainelection (mainSelected) {
+    const selectedItem = document.querySelector('.main-course .option-border'); 
+
+    if (selectedItem !== null) {
+        selectedItem.classList.remove('option-border');
+    } 
+    
+    mainSelected.classList.add('option-border');      
+}
+
+function drinkSelection (drinkSelected) {
+    const selectedItem = document.querySelector('.drinks .option-border');
+
+    if (selectedItem !== null) {
+        selectedItem.classList.remove('option-border');
+    }
+
+    drinkSelected.classList.add('option-border');
+}
+
+function dessertSelection (dessertSelected) {
+    const selectedItem = document.querySelector('.desserts .option-border');
+
+    if (selectedItem !== null) {
+        selectedItem.classList.remove('option-border');
+    }
+
+    dessertSelected.classList.add('option-border');    
+}
+
+function finishOrder () {
+
+    const selectedMain = document.querySelector('.main-course .option-border');
+    const selectedDrink = document.querySelector('.drinks .option-border');
+    const selectedDessert = document.querySelector('.desserts .option-border');
+
+    const activeButton = document.querySelector('.active-button');
+    const inactiveButton = document.querySelector('.inactive-button');
+
+
+    if ((selectedMain!== null) && (selectedDrink !== null) && (selectedDessert !== null)) {
+        activeButton.classList.remove('hide-class');
+        inactiveButton.classList.add('hide-class');
+    }  
+}
 
