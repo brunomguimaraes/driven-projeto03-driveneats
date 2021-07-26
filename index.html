@@ -38,19 +38,19 @@
 			<div class="main-course">
 
 				<!-- OPTION -->
-				<div class="option" onclick="mainelection(this), checkIconMain('icon1'), finishOrder();">
+				<div class="option" onclick="mainSelection(this), checkIconMain('icon1'), finishOrder();">
 
 					<div class="image">
 						<img src="images/sandwich.jpeg">
 					</div>
 					<div class="item-name">
-						Lentilha Power com Cheddar
+						Lentilha Power 1
 					</div>
 					<div class="item-description">
 						Broto de alfafa e hamburguer
 					</div>
 					<div class="item-price">
-						R$ 21,90
+						R$ <span class="value">21,90</span>
 					</div>
 
 					<div class="check-icon" id="icon1">
@@ -60,19 +60,19 @@
 				<!-- OPTION -->	
 				
 				<!-- OPTION -->
-				<div class="option" onclick="mainelection(this), checkIconMain('icon2'), finishOrder();">
+				<div class="option" onclick="mainSelection(this), checkIconMain('icon2'), finishOrder();">
 
 					<div class="image">
 						<img src="images/sandwich.jpeg">
 					</div>
 					<div class="item-name">
-						Lentilha Power com Cheddar
+						Lentilha Power 2
 					</div>
 					<div class="item-description">
 						Broto de alfafa e hamburguer
 					</div>
 					<div class="item-price">
-						R$ 23,90
+						R$ <span class="value">23,90</span>
 					</div>
 
 					<div class="check-icon" id="icon2">
@@ -82,19 +82,19 @@
 				<!-- OPTION -->	
 
 				<!-- OPTION -->
-				<div class="option" onclick="mainelection(this), checkIconMain('icon3'), finishOrder();">
+				<div class="option" onclick="mainSelection(this), checkIconMain('icon3'), finishOrder();">
 
 					<div class="image">
 						<img src="images/sandwich.jpeg">
 					</div>
 					<div class="item-name">
-						Lentilha Power com Cheddar
+						Lentilha Power 3
 					</div>
 					<div class="item-description">
 						Broto de alfafa e hamburguer
 					</div>
 					<div class="item-price">
-						R$ 25,90
+						R$ <span class="value">25,90</span>
 					</div>
 
 					<div class="check-icon" id="icon3">
@@ -126,7 +126,7 @@
 						Laranja com morango
 					</div>
 					<div class="item-price">
-						R$ 9,90
+						R$ <span class="value">9,90</span>
 					</div>
 					<div class="check-icon" id="icon4">
 						<ion-icon name="checkmark-circle"></ion-icon>
@@ -148,7 +148,7 @@
 						Cravo e canela
 					</div>
 					<div class="item-price">
-						R$ 11,90
+						R$ <span class="value">11,90</span>
 					</div>
 					<div class="check-icon" id="icon5">
 						<ion-icon name="checkmark-circle"></ion-icon>
@@ -170,7 +170,7 @@
 						Abacaxi
 					</div>
 					<div class="item-price">
-						R$ 13,90
+						R$ <span class="value">13,90</span>
 					</div>
 					<div class="check-icon" id="icon6">
 						<ion-icon name="checkmark-circle"></ion-icon>
@@ -196,14 +196,14 @@
 						<img src="images/pie.jpeg">
 					</div>
 					<div class="item-name">
-						Torta Holandesa - pedaço
+						Torta Holandesa 1
 					</div>
 					<div class="item-description">
 						Creme branco e 
 						cobertura
 					</div>
 					<div class="item-price">
-						R$ 7,90
+						R$ <span class="value">7,90</span>
 					</div>
 					<div class="check-icon" id="icon7">
 						<ion-icon name="checkmark-circle"></ion-icon>
@@ -219,14 +219,14 @@
 						<img src="images/pie.jpeg">
 					</div>
 					<div class="item-name">
-						Torta Holandesa - pedaço
+						Torta Holandesa 2
 					</div>
 					<div class="item-description">
 						Creme branco e 
 						cobertura
 					</div>
 					<div class="item-price">
-						R$ 9,90
+						R$ <span class="value">9,90</span>
 					</div>
 					<div class="check-icon" id="icon8">
 						<ion-icon name="checkmark-circle"></ion-icon>
@@ -242,14 +242,14 @@
 						<img src="images/pie.jpeg">
 					</div>
 					<div class="item-name">
-						Torta Holandesa - pedaço
+						Torta Holandesa 3
 					</div>
 					<div class="item-description">
 						Creme branco e 
 						cobertura
 					</div>
 					<div class="item-price">
-						R$ 12,90
+						R$ <span class="value">10,90</span>
 					</div>
 					<div class="check-icon" id="icon9">
 						<ion-icon name="checkmark-circle"></ion-icon>
@@ -264,7 +264,7 @@
 
 	<div class="bottom-bar">
 
-		<div class="inactive-button" onclick="finishOrder(this);"> 
+		<div class="inactive-button"> 
 
 			<p>Selecione os 3 itens</p>
 
@@ -272,7 +272,7 @@
 
 		</div>
 
-		<div class="active-button hide-class">
+		<div class="active-button hide-class" onclick="sendMessage()">
 
 			<p>Fechar pedido</p>
 

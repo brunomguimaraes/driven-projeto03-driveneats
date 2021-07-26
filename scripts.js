@@ -58,14 +58,17 @@ function checkIconDesserts(active) {
     }    
 }
 
-function mainelection (mainSelected) {
+function mainSelection (mainSelected) {
     const selectedItem = document.querySelector('.main-course .option-border'); 
+    const selectedIcon = document.querySelector('.main-course .hide-class');
 
     if (selectedItem !== null) {
-        selectedItem.classList.remove('option-border');
+        selectedItem.classList.remove('option-border');      
     } 
     
-    mainSelected.classList.add('option-border');      
+    //if(mainSelected !== selectedItem){
+        mainSelected.classList.add('option-border');      
+    //}      
 }
 
 function drinkSelection (drinkSelected) {
@@ -101,6 +104,32 @@ function finishOrder () {
     if ((selectedMain!== null) && (selectedDrink !== null) && (selectedDessert !== null)) {
         activeButton.classList.remove('hide-class');
         inactiveButton.classList.add('hide-class');
-    }  
+    }
+}
+
+function calculateTotal () {
+    const mainPrice = Number((document.querySelector('.main-course .option-border').querySelector('.value').innerHTML).replace (',', '.'));
+    const drinkPrice = Number((document.querySelector('.drinks .option-border').querySelector('.value').innerHTML).replace (',', '.'));
+    const dessertPrice = Number((document.querySelector('.desserts .option-border').querySelector('.value').innerHTML).replace (',', '.'));
+
+    const totalPrice = (mainPrice + drinkPrice + dessertPrice);
+    const convertedTotal = totalPrice.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
+
+    return convertedTotal;
+}
+
+function sendMessage () {    
+    const info = "Olá, gostaria de fazer o pedido: - Prato: " + 
+    document.querySelector('.main-course .option-border').querySelector('.item-name').innerHTML +
+    " " +
+    "- Bebida: " + document.querySelector('.drinks .option-border').querySelector('.item-name').innerHTML +
+    " " +
+    "- Sobremesa: " + document.querySelector('.desserts .option-border').querySelector('.item-name').innerHTML +
+    " " +
+    "Total: " + calculateTotal();
+
+    const message = encodeURIComponent(info);
+    
+    window.location.href = "https://wa.me/5519999178728?text=" + message;
 }
 
